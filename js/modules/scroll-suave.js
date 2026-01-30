@@ -1,5 +1,4 @@
 export default class ScrollSuave {
-
   constructor(links, options) {
     this.linksInternos = document.querySelectorAll(links);
     if (options === undefined) {
@@ -7,6 +6,7 @@ export default class ScrollSuave {
     } else {
       this.options = options;
     }
+
     this.scrollToSection = this.scrollToSection.bind(this);
   }
 
@@ -30,4 +30,3 @@ export default class ScrollSuave {
     return this;
   }
 }
-

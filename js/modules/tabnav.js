@@ -4,6 +4,7 @@ export default class TabNav {
     this.tabContent = document.querySelectorAll(content);
     this.activeClass = 'ativo';
   }
+
   // Ativa a tab de acordo com o index da mesma
   activeTab(index) {
     this.tabContent.forEach((section) => {
@@ -22,9 +23,10 @@ export default class TabNav {
 
   init() {
     if (this.tabMenu.length && this.tabContent.length) {
-      // ativar o primeiro item
+      // ativar primeiro item
       this.activeTab(0);
       this.addTabNavEvent();
     }
+    return this;
   }
 }
